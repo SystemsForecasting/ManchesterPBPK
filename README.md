@@ -5,8 +5,6 @@ A running version of the app che be found here: https://manchester.shinyapps.io/
 
 The last version of the software was updated on 03 September 2021.
 
-Authors: *Nicola Melillo & Hitesh Mistry*
-
 ## Files
 - `server.R`: Shiny server function, it contains the "logics" of the applications (e.g., what happens when clicking a button).
 - `ui.R`: Shiny user interface function, it contains the visual aspect of the application.
