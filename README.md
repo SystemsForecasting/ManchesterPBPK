@@ -1,8 +1,9 @@
 # Educational PBPK
-Basic educational physiologically based pharmacokinetics (PBPK) model for performing single subject bottom up predictions.
+This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the [rxode2](https://cran.r-project.org/web/packages/rxode2/index.html) package and non-compartmental analysis (NCA) was performed with the [PKNCA](https://cran.r-project.org/web/packages/PKNCA/index.html) package.
 
 A running version of the app che be found here: https://manchester.shinyapps.io/pbpk/.
 
+Additions, suggestions and amendments are welcome.
 
 ## Files
 - `server.R`: Shiny server function, it contains the "logics" of the applications (e.g., what happens when clicking a button).
