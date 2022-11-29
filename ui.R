@@ -1,11 +1,11 @@
 # UI PBPK model in R
-# Nicola Melillo, Hitesh Mistry, 07/06/2021
+# Nicola Melillo, Hitesh Mistry, 10/11/2022
 
 library(shiny)
 library(shinyBS)
 library(shinyjs)
 
-shinyUI(navbarPage("Manchester PBPK",
+shinyUI(navbarPage("Educational PBPK app v0.2",
                    
                    ### main PBPK simulation tab panel ------------------------------------------------------------------------
                    tabPanel("Inputs/Simulation",
@@ -338,11 +338,12 @@ shinyUI(navbarPage("Manchester PBPK",
                    tabPanel("Model description",
                             shinyUI(fluidPage(
                               withMathJax(),
-                              h1('Manchester PBPK Model'),
+                              h1('Educational PBPK model'),
                               p(),
                               br(),
-                              p('This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the',tags$a(href="https://cran.r-project.org/web/packages/RxODE/index.html", "RxODE"),' package and non-compartmental analysis (NCA) was performed with the ',tags$a(href="https://cran.r-project.org/web/packages/PKNCA/index.html", "PKNCA"),"package."),
-                              p("The model code can be found", tags$a(href="https://github.com/SystemsForecasting/ManchesterPBPK", "here"), "."),
+                              p('This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the',tags$a(href="https://cran.r-project.org/web/packages/rxode2/index.html", "rxode2"),' package and non-compartmental analysis (NCA) was performed with the ',tags$a(href="https://cran.r-project.org/web/packages/PKNCA/index.html", "PKNCA"),"package."),
+                              p("The model code can be found at the", tags$a(href="https://github.com/SystemsForecasting/ManchesterPBPK", "SystemsForecasting GitHub page"), "."),
+                              p(strong("This is an open source project"),": additions, suggestions and amendments are welcome."),
                               hr(),
                               h3('Basic equations of the PBPK model'),
                               p('This model is composed of two parts: a PBPK model describing the distribution, metabolism and elimination of the drug in the body and a compartmental absorption and transit (CAT) based model describing events following per oral drug administration in the gut.'),
@@ -423,6 +424,9 @@ shinyUI(navbarPage("Manchester PBPK",
                                 )
                               ),
                               p('All the remaining physiological parameters are fixed to mean values. Values for these parameters and relative references can be found with the source code on github, in the data directory.'),
+                              h4('QSPR/QSAR'),
+                              p('It is possible to predict some of the physicochemical parameters needed to simulate the PBPK model through quantitative structure property/activity relationships (QSPR, QSAR) models. QSPR/QSAR are data-driven/machine learning models that can take as input the molecular structure (e.g., SMILE) and produce as outputs physicochemical properties such as logPow, pKa, hepatic CL etc.',
+                                " An open-source QSAR app is ",tags$a(href="https://ntp.niehs.nih.gov/whatwestudy/niceatm/comptox/ct-opera/opera.html", "OPERA")," (OPEn (q)saR App), developed by the U.S. NIEHS. A free QSAR software is ",tags$a(href="https://qsartoolbox.org/", "QSAR Toolbox"),". The QSAR Toolbox features a WebAPI, allowing the system to interact with other tools."),
                               hr(),
                               
                               h3('References'),
@@ -452,6 +456,7 @@ shinyUI(navbarPage("Manchester PBPK",
                                 tags$li("Expansion of compounds library."),
                                 tags$li("Implementation of local and global sensitivity analysis."),
                                 tags$li("Permeability limited model for the liver."),
+                                tags$li("Integrate the PBPK app with a QSPR/QSAR toolbox allowing prediction of physicochemical properties from molecular structure."),
                               ),
                               hr(),
                               
@@ -465,10 +470,12 @@ shinyUI(navbarPage("Manchester PBPK",
                               h2('Authors'),
                               tags$div(
                                 tags$ul(
-                                  tags$li("Nicola Melillo (",tags$a(href="https://www.linkedin.com/in/nicola-melillo-4868ba107/", "LinkedIn"),"|",tags$a(href="mailto:nicola.melillo01@gmail.com", "email"),"): development of PBPK software and Shiny R app."),
+                                  tags$li("Nicola Melillo (",tags$a(href="https://www.linkedin.com/in/nicola-melillo-4868ba107/", "LinkedIn"),"|",tags$a(href="mailto:nicola.melillo01@gmail.com", "email"),"): conceptualization, development of PBPK software and Shiny R app."),
                                   tags$li("Hitesh Mistry (",tags$a(href="https://www.linkedin.com/in/hitesh-mistry-1ba60121/", "LinkedIn"),"|",tags$a(href="mailto:hitesh.b.mistry@gmail.com", "email"),"): conceptualization and supervision of the work, development of Shiny R app."),
                                 )
                               ),
+                              p("The model is currently maintained by", tags$a(href="http://systemsforecasting.com/", "Systems Forecasting"),"."),
+                              h3("Acknowledgments"),
                               p('We want to thank Professor Leon Aarons of University of Manchester and Dr. Adam Darwich of KTH for the extremely valuable help in designing the app and for the critical revision.'),
                               hr(),
                               br(),

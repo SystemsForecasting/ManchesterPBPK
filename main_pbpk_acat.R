@@ -15,7 +15,7 @@
 
 # libraries
 library(readxl)
-library(RxODE)
+library(rxode2)
 library(ggplot2)
 library(RColorBrewer)
 library(gridExtra)

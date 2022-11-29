@@ -1,7 +1,5 @@
 # Server PBPK model in R
-# Nicola Melillo, Hitesh Mistry, 19/06/2021
-
-#setwd("C:/Users/nicol/Documents/POSTDOC/projects/systemsforcasting/PBPK/codes/2021_05_19_PBPK_app_v08")
+# Nicola Melillo, Hitesh Mistry, 10/11/2022
 
 # libraries
 library(shiny)
@@ -9,7 +7,7 @@ library(shinyBS)
 library(shinyjs)
 library(readxl)
 library(writexl)
-library(RxODE)
+library(rxode2)
 library(dplyr)
 library(ggplot2)
 library(RColorBrewer)
@@ -20,7 +18,7 @@ library(shinybusy)
 # my functions
 source("./functions/import_param.R")
 source("./functions/PBPK_model_rxode.R")
-source("./functions/functions_plot3.R")
+source("./functions/functions_plot4.R")
 
 
 
@@ -869,6 +867,11 @@ shinyServer(function(input, output, session) {
       setwd(dir.original)
     }
   )
+  
+  # to terminate R session when closing the browser
+  session$onSessionEnded(function() {
+    stopApp()
+  })
   
 })
 
