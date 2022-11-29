@@ -1,5 +1,5 @@
-# ManchesterPBPK
-Basic physiologically based pharmacokinetics (PBPK) model for performing single subject bottom up predictions.
+# Educational PBPK
+Basic educational physiologically based pharmacokinetics (PBPK) model for performing single subject bottom up predictions.
 
 A running version of the app che be found here: https://manchester.shinyapps.io/pbpk/.
 
@@ -10,7 +10,7 @@ A running version of the app che be found here: https://manchester.shinyapps.io/
 - `main_pbpk_acat.R`: R script that can be used to run the model outside the Shiny app. This file is not used in `server.R` or `ui.R`.
 - `functions/PBPK_model_rxode.R`: it contains the ordinary differential equations of the PBPK and compartmental absorption & transit (CAT) models, written in `RxODE` format.
 - `functions/import_param.R`: it contains the functions used to import and elaborate the PBPK and CAT model parameters.
-- `functions/functions_plot3.R`: it contains the functions used to generate the plots.
+- `functions/functions_plot4.R`: it contains the functions used to generate the plots.
 - `data/PBPK_parameters`: it contains `.xlsx` files of the physiological parameters for all the species supported by the Manchester PBPK app. All the references are included in the `.xlsx` files.
 - `data/library_drugs`:it contains `.xlsx` files of the drug physicochemical parameters and of drugs pharmacokinetics. All the references are included in the `.xlsx` files and in `data/library_drugs/readme.txt`.
 
@@ -21,7 +21,7 @@ A running version of the app che be found here: https://manchester.shinyapps.io/
 3. Open RStudio.
 4. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script.
 ```
-install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","RxODE","dplyr","ggplot2","RColorBrewer","gridExtra","PKNCA","shinybusy"))
+install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","rxode2","dplyr","ggplot2","RColorBrewer","gridExtra","PKNCA","shinybusy"))
 ```
 5. Restart RStudio.
 6. Open server.R: double click on the file and it should open automatically.
