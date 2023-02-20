@@ -25,6 +25,6 @@ Additions, suggestions and amendments are welcome.
 install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","rxode2","dplyr","ggplot2","RColorBrewer","gridExtra","PKNCA","shinybusy"))
 ```
 5. Restart RStudio.
-6. Download and unzip the ManchesterPBPK code. To download the code, press the green `<> code` button above and press `ZIP download`.
+6. Download and unzip the ManchesterPBPK code. To download the code, press the green `<> code` button above and press `Download ZIP`.
 7. Open server.R: double click on the file and it should open automatically.
 8. Click on the green button "Run App" to run the app (It  may crash on first use after installing all libraries so please try again).
