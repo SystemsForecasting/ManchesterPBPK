@@ -17,8 +17,8 @@ Additions, suggestions and amendments are welcome.
 
 ## How to install on a local machine
 
-1. Install R (https://www.r-project.org/).
-2. Install RStudio (https://www.rstudio.com/).
+1. Install R (select your favourite CRAN mirror from https://cran.r-project.org/mirrors.html and dowload the latest version of R).
+2. Install RStudio (https://posit.co/download/rstudio-desktop/).
 3. Open RStudio.
 4. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script.
 ```
