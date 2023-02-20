@@ -20,7 +20,7 @@ Additions, suggestions and amendments are welcome.
 1. Install R (select your favourite CRAN mirror from https://cran.r-project.org/mirrors.html and dowload the latest version of R).
 2. Install RStudio (https://posit.co/download/rstudio-desktop/).
 3. Open RStudio.
-4. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script.
+4. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script (it may take a while...).
 ```
 install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","rxode2","dplyr","ggplot2","RColorBrewer","gridExtra","PKNCA","shinybusy"))
 ```
