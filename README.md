@@ -19,12 +19,13 @@ Additions, suggestions and amendments are welcome.
 
 1. Install R (select your favourite CRAN mirror from https://cran.r-project.org/mirrors.html and dowload the latest version of R).
 2. Install RStudio (https://posit.co/download/rstudio-desktop/).
-3. Open RStudio.
-4. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script (it may take a while...).
+3. If you have Windows OS, [install RTools](https://cran.r-project.org/bin/windows/Rtools/) (check your R version!). If you have Ubuntu, you don't need RTools, but probably you will need to install some libraries (i.e., [build-essential](https://github.com/SystemsForecasting/nlmixr2_on_AWS#install-r-and-rstudio), [make, cmake etc.](https://github.com/SystemsForecasting/nlmixr2_on_AWS#install-tidyverse-and-nlmixr2)). We haven't tested the installation on MacOS (if you do, please provide us some feedback!).
+4. Open RStudio.
+5. Install all libraries: copy, paste and run the following R code in the RStudio console or in a script (it may take a while...).
 ```
 install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","rxode2","dplyr","ggplot2","RColorBrewer","gridExtra","PKNCA","shinybusy"))
 ```
-5. Restart RStudio.
-6. Download and unzip the ManchesterPBPK code. To download the code, press the green `<> code` button above and press `Download ZIP`.
-7. Open server.R: double click on the file and it should open automatically.
-8. Click on the green button "Run App" to run the app (It  may crash on first use after installing all libraries so please try again).
+6. Restart RStudio.
+7. Download and unzip the ManchesterPBPK code. To download the code, press the green `<> code` button above and press `Download ZIP`.
+8. Open the unzipped folder containing all the code. You should see the same files and folders present at the top of this page. Open server.R with RStudio: double click on the file and it should open automatically. If it does not work, right-click on the file and select open with RStudio.
+9. Now, you should have the server.R code opened in RStudio. Next to the usual "Run" button, there should be a green button "Run App": click it to run the app (it  may crash on first use after installing all libraries so please close RStudio and try again point 9).
