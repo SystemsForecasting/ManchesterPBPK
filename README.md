@@ -1,5 +1,5 @@
 # Educational PBPK, PBPKedu
-This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the [rxode2](https://cran.r-project.org/web/packages/rxode2/index.html) package and non-compartmental analysis (NCA) was performed with the [PKNCA](https://cran.r-project.org/web/packages/PKNCA/index.html) package.
+This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool, hence named PBPKedu. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the [rxode2](https://cran.r-project.org/web/packages/rxode2/index.html) package and non-compartmental analysis (NCA) was performed with the [PKNCA](https://cran.r-project.org/web/packages/PKNCA/index.html) package.
 
 A running version of the app (might be not updated) can be found here: https://manchester.shinyapps.io/pbpk/.
 
@@ -12,7 +12,7 @@ Additions, suggestions and amendments are welcome.
 - `functions/PBPK_model_rxode.R`: it contains the ordinary differential equations of the PBPK and compartmental absorption & transit (CAT) models, written in `RxODE` format.
 - `functions/import_param.R`: it contains the functions used to import and elaborate the PBPK and CAT model parameters.
 - `functions/functions_plot4.R`: it contains the functions used to generate the plots.
-- `data/PBPK_parameters`: it contains `.xlsx` files of the physiological parameters for all the species supported by the Manchester PBPK app. All the references are included in the `.xlsx` files.
+- `data/PBPK_parameters`: it contains `.xlsx` files of the physiological parameters for all the species supported by the PBPKedu app. All the references are included in the `.xlsx` files.
 - `data/library_drugs`:it contains `.xlsx` files of the drug physicochemical parameters and of drugs pharmacokinetics. All the references are included in the `.xlsx` files and in `data/library_drugs/readme.txt`.
 
 ## How to install on a local machine
