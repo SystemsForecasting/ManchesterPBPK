@@ -1,4 +1,4 @@
-# Educational PBPK
+# Educational PBPK, PBPKedu
 This physiologically based pharmacokinetic (PBPK) model is designed as an educational tool. The aim is to provide a simple, open source, freely downloadable PBPK model for performing basic single subject bottom-up simulations in R. The model has not been tested against a large set of compounds. All parameters were taken from the literature. The PBPK model was implemented by using the [rxode2](https://cran.r-project.org/web/packages/rxode2/index.html) package and non-compartmental analysis (NCA) was performed with the [PKNCA](https://cran.r-project.org/web/packages/PKNCA/index.html) package.
 
 A running version of the app (might be not updated) can be found here: https://manchester.shinyapps.io/pbpk/.
@@ -29,3 +29,20 @@ install.packages(c("shiny","shinyBS","shinyjs","readxl","writexl","rxode2","dply
 7. Download and unzip the ManchesterPBPK code. To download the code, press the green `<> code` button above and press `Download ZIP`.
 8. Open the unzipped folder containing all the code. You should see the same files and folders present at the top of this page. Open server.R with RStudio: double click on the file and it should open automatically. If it does not work, right-click on the file and select open with RStudio.
 9. Now, you should have the server.R code opened in RStudio. Next to the usual "Run" button, there should be a green button "Run App": click it to run the app (it  may crash on first use after installing all libraries so please close RStudio and try again point 9).
+
+
+## Standalone version
+An installer for a standalone version is made avaiable [here](https://drive.google.com/file/d/1tJAGFH0A9wbhUvd1z6KdHj7yJZJeBbGm/view?usp=sharing) (through Google Drive). Windows 10 and 11 are the only supported OS.  
+With this standalone version you can play with the app also without installing R, RStudio and so on. To install the PBPKedu app, follow these steps.  
+
+1. [Install RTools](https://cran.r-project.org/bin/windows/Rtools/) for the R 4.2 version. Unfortunately, this is still needed!
+2. Dowload `installer_PBPKedu_windows10.exe` (despite the name it should work for Windows 11 as well) at [this link](https://drive.google.com/file/d/1tJAGFH0A9wbhUvd1z6KdHj7yJZJeBbGm/view?usp=sharing).
+3. Open (double click) `installer_PBPKedu_windows10.exe`.
+4. Allow the app to make changes on the device.
+5. Select the app location, default should be `C:\Program Files (x86)\PBPKedu`.
+6. Tick create desktop shortcut.
+7. Continue and press install.
+
+In a few minutes the app should be installed and a '90s style `PBPKedu` icon should appear on your desktop. Open the app: you should see PBPKedu opened in your default web browser.  
+Enjoy!
+
