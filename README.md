@@ -3,7 +3,19 @@ This physiologically based pharmacokinetic (PBPK) model is designed as an educat
 
 A running version of the app (might be not updated) can be found here: https://manchester.shinyapps.io/pbpk/.
 
-Additions, suggestions and amendments are welcome.
+**What is PBPKedu?**
+- hopefully an useful teaching & learning tool
+- a freely avaialble app (and code) which might be used for quickly exploring PK properties of certain compounds
+- a freely avaialble app (and code) which might be used for quickly exploring what happens if certain compound-system properties are changed
+- a whole body PBPK model written in `rxode2`, which can be downloaded, inspected, modified...
+- a tool which can be expanded by everyone (some nice new features are welcome!)
+- ...
+
+**What is not PBPKedu?**
+- a qualified, validated (whatever that means) or (better) corroborated, trusted PBPK model or platform
+- a tool claiming predictability
+
+Additions, suggestions and amendments are welcome! Enjoy!
 
 ## Files
 - `server.R`: Shiny server function, it contains the "logics" of the applications (e.g., what happens when clicking a button).
@@ -45,4 +57,15 @@ With this standalone version you can play with the app also without installing R
 
 In a few minutes the app should be installed and a '90s style `PBPKedu` icon should appear on your desktop. Open the app: you should see PBPKedu opened in your default web browser.  
 Enjoy!
+
+
+## Unordered list of possible additional features
+  
+
+- simulation for populations
+- global sensitivity analysis tool
+- alternative absorption routes (e.g., lung, skin...)
+- prediction of drug properties through quantitative structure activity/properties relationship (QSAR/QSPR)
+- ...
+
 
